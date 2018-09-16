@@ -169,6 +169,8 @@ let game = {
         game.incorrect++;
         $("#game-area").html("<h2>WRONG!</h2>");
         $("#game-area").append("<h2>"+questions[game.currentQuestion].correctAnswer+"</h2>");
+        // I cant get the picture to show when the answer is correct not quite sure whatim doing wrong
+        $("#game-area").append("<img>").attr("src",questions[game.currentQuestion].image);
         if(game.currentQuestion==questions.length-1){
             setTimeout(game.results,3*1000);
         } else {
